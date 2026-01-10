@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shawn Fulham | Priority Accounts & Strategic Partnerships</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #0a0a0a, #001a0d, #003d1a, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 20s infinite;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            33% { transform: translateY(-100vh) translateX(50px); }
+            66% { transform: translateY(-200vh) translateX(-50px); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #5eead4, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #5eead4;
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #5eead4, #10b981);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 50px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #5eead4, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease 0.2s both;
+            background-size: 200% 200%;
+            animation: fadeInUp 1s ease 0.2s both, gradientMove 3s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #5eead4;
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease 0.8s both, pulse 2s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            50% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5);
+            animation: none;
+        }
+
+        /* Section styling */
+        section {
+            padding: 100px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            font-size: 42px;
+            margin-bottom: 50px;
+            text-align: center;
+            background: linear-gradient(45deg, #5eead4, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #cccccc;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-tag {
+            padding: 10px 20px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid #10b981;
+            border-radius: 25px;
+            color: #5eead4;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .skill-tag:hover {
+            background: rgba(16, 185, 129, 0.3);
+            transform: translateY(-3px) rotate(2deg);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Experience cards */
+        .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .experience-card:hover::before {
+            left: 100%;
+        }
+
+        .experience-card:hover {
+            border-color: #10b981;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .experience-card h3 {
+            color: #5eead4;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .experience-card h4 {
+            color: #10b981;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .experience-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Partnerships section */
+        .partners {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .partner-card:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateY(-5px) rotate(-2deg);
+            border-color: #10b981;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .partner-card h3 {
+            color: #5eead4;
+            font-size: 20px;
+        }
+
+        /* Contact section */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-link {
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero h2 { font-size: 20px; }
+            .about-content { grid-template-columns: 1fr; }
+            nav { padding: 20px; }
+            .nav-links { gap: 15px; }
+            section { padding: 50px 20px; }
+            .contact-links { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Floating particles -->
+    <script>
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            document.body.appendChild(particle);
+        }
+    </script>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SF</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#partnerships">Partnerships</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shawn Fulham</h1>
+            <h2>Lead Partnerships Manager | E-Commerce Innovation</h2>
+            <p>Building strategic partnerships at Shopify to empower merchants worldwide. Transforming commerce through innovative technology solutions and collaborative ecosystems.</p>
+            <a href="#contact" class="cta-button">Let's Connect</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>As Lead Partnerships Manager at Shopify, I'm passionate about building strategic partnerships that empower merchants and transform commerce globally. 🚀</p>
+                <p style="margin-top: 20px;">With 5+ years of experience at PwC Canada managing priority accounts and strategic alliances with tech giants like Microsoft, Salesforce, SAP, and Workday, I bring a wealth of knowledge in partnership development, go-to-market strategies, and technology commercialization to the exciting world of e-commerce!</p>
+            </div>
+            <div>
+                <h3 style="color: #5eead4; margin-bottom: 20px; font-size: 24px;">Core Expertise 💡</h3>
+                <div class="skills">
+                    <span class="skill-tag">E-Commerce Strategy</span>
+                    <span class="skill-tag">Strategic Partnerships</span>
+                    <span class="skill-tag">Alliance Sales</span>
+                    <span class="skill-tag">B2B Sales</span>
+                    <span class="skill-tag">Partner Development</span>
+                    <span class="skill-tag">Account Management</span>
+                    <span class="skill-tag">Go-to-Market Strategy</span>
+                    <span class="skill-tag">Technology Commercialization</span>
+                    <span class="skill-tag">Merchant Solutions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Career Journey 🎯</h2>
+        <div class="experience-card">
+            <h3>Lead Partnerships Manager</h3>
+            <h4>Shopify | Current</h4>
+            <p>Leading strategic partnerships to empower merchants and transform global commerce. Building innovative technology ecosystems that help businesses of all sizes thrive in the digital economy. Driving collaboration with key partners to create seamless merchant experiences and unlock new opportunities in e-commerce. 🛍️</p>
+        </div>
+        <div class="experience-card">
+            <h3>Priority Account Manager</h3>
+            <h4>PwC Canada | 5+ Years</h4>
+            <p>Led priority account management and fostered strategic partnerships with technology giants including Microsoft, Salesforce, SAP, and Workday. Drove alliance sales, shaped go-to-market strategies, and enabled technology commercialization. Collaborated with cross-functional teams to deliver innovative solutions bridging emerging technologies and practical business implementation.</p>
+        </div>
+        <div class="experience-card">
+            <h3>Education</h3>
+            <h4>University of Guelph</h4>
+            <p>Strong academic foundation supporting a career in strategic partnerships and technology commercialization.</p>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section id="partnerships">
+        <h2 class="section-title">Strategic Partnerships 🤝</h2>
+        <p style="text-align: center; color: #cccccc; font-size: 18px; margin-bottom: 30px;">Experience collaborating with industry leaders to drive innovation and deliver exceptional value</p>
+        <div class="partners">
+            <div class="partner-card">
+                <h3>🛍️ Shopify</h3>
+            </div>
+            <div class="partner-card">
+                <h3>Microsoft</h3>
+            </div>
+            <div class="partner-card">
+                <h3>Salesforce</h3>
+            </div>
+            <div class="partner-card">
+                <h3>SAP</h3>
+            </div>
+            <div class="partner-card">
+                <h3>Workday</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Connect 📬</h2>
+        <p style="text-align: center; color: #cccccc; font-size: 18px; margin-bottom: 30px;">Based in Toronto 🍁 | 500+ Connections</p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/shawnfulham" target="_blank" class="contact-link">
+                <span>💼</span>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:shawn.fulham@shopify.com" class="contact-link">
+                <span>✉️</span>
+                <span>shawn.fulham@shopify.com</span>
+            </a>
+            <a href="tel:6477029097" class="contact-link">
+                <span>📱</span>
+                <span>647-702-9097</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Shawn Fulham. All rights reserved.</p>
+    </footer>
+</body>
+</html>
