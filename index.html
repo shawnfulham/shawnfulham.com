@@ -1,9 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shawn Fulham | Strategic Partnerships & E-Commerce Innovation</title>
+    <title>Shawn Fulham | Partner Development Manager | Strategic Partnerships & E-Commerce Expert</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Shawn Fulham - Partner Development Manager at Shopify with 8+ years experience in strategic partnerships, alliance sales, and revenue generation. Expert in e-commerce innovation and B2B SaaS sales based in Toronto.">
+    <meta name="keywords" content="Shawn Fulham, Partner Development Manager, Shopify, Strategic Partnerships, Alliance Sales, E-commerce, SaaS Sales, Toronto, B2B Sales, Account Management, Go-to-Market Strategy, Revenue Generation">
+    <meta name="author" content="Shawn Fulham">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://shawnfulham.com">
+    
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto">
+    <meta name="geo.position" content="43.651070;-79.347015">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Shawn Fulham | Partner Development Manager | Strategic Partnerships Expert">
+    <meta property="og:description" content="Building strategic partnerships at Shopify. 8+ years experience driving revenue growth through innovative technology alliances. $10M portfolio | 15% YoY growth.">
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQFFlLD84gO3ng/profile-displayphoto-shrink_200_200/B56ZbHUrPpGoAc-/0/1747100808463">
+    <meta property="og:url" content="https://shawnfulham.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shawn Fulham | Partner Development Manager at Shopify">
+    <meta name="twitter:description" content="Strategic partnerships expert at Shopify with proven track record in revenue generation and alliance sales. 8+ years experience in B2B SaaS.">
+    <meta name="twitter:image" content="https://media.licdn.com/dms/image/v2/D5603AQFFlLD84gO3ng/profile-displayphoto-shrink_200_200/B56ZbHUrPpGoAc-/0/1747100808463">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://media.licdn.com">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shawn Fulham",
+      "jobTitle": "Partner Development Manager",
+      "description": "Strategic partnerships and alliance sales expert specializing in e-commerce innovation and B2B SaaS revenue generation",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Shopify"
+      },
+      "url": "https://shawnfulham.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/shawnfulham"
+      ],
+      "email": "shawnfulham@gmail.com",
+      "telephone": "+1-647-702-9097",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "University of Guelph"
+      },
+      "knowsAbout": [
+        "Strategic Partnerships",
+        "Alliance Sales",
+        "E-commerce",
+        "SaaS Sales",
+        "B2B Sales",
+        "Account Management",
+        "Go-to-Market Strategy",
+        "Revenue Generation",
+        "Partner Development"
+      ]
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -55,17 +127,20 @@
         }
 
         /* Navigation */
-        nav {
+        header {
             position: fixed;
             top: 0;
             width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(10px);
-            z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -443,6 +518,98 @@
             font-size: 14px;
         }
 
+        /* Snake Game Modal */
+        .game-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .game-modal.active {
+            display: flex;
+        }
+
+        .game-container {
+            text-align: center;
+            background: linear-gradient(45deg, #000000, #1a0033, #330066);
+            padding: 30px;
+            border-radius: 20px;
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+            animation: neonPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes neonPulse {
+            0%, 100% { box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff; }
+            50% { box-shadow: 0 0 50px #ff00ff, 0 0 100px #00ffff; }
+        }
+
+        .game-title {
+            font-family: 'Courier New', monospace;
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: rainbowText 3s ease infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+        }
+
+        @keyframes rainbowText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .game-canvas {
+            border: 4px solid #00ffff;
+            box-shadow: 0 0 20px #00ffff, inset 0 0 20px rgba(0, 255, 255, 0.3);
+            background: #000;
+        }
+
+        .game-score {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            color: #00ffff;
+            margin: 20px 0;
+            text-shadow: 0 0 10px #00ffff;
+        }
+
+        .game-close {
+            background: linear-gradient(45deg, #ff00ff, #ff0080);
+            color: white;
+            border: 2px solid #ff00ff;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px #ff00ff;
+        }
+
+        .game-close:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ff00ff;
+        }
+
+        .game-instructions {
+            font-family: 'Courier New', monospace;
+            color: #ffff00;
+            margin: 15px 0;
+            text-shadow: 0 0 10px #ffff00;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -510,7 +677,8 @@
     </script>
 
     <!-- Navigation -->
-    <nav>
+    <header>
+        <nav>
         <div class="logo" title="Click me! 🎉">SF</div>
         <div class="nav-links">
             <a href="#about">About</a>
@@ -518,14 +686,16 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
+    </header>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQFFlLD84gO3ng/profile-displayphoto-shrink_200_200/B56ZbHUrPpGoAc-/0/1747100808463?e=1770249600&v=beta&t=lxX4JGBaafPbvWa6K4NF4o893Py1RV_nLLL7NtoeElw" alt="Shawn Fulham" class="hero-avatar-img">
-            <h1>Shawn Fulham</h1>
-            <h2>Partner Development Manager | Strategic Partnerships</h2>
-            <p>Building strategic partnerships at Shopify to empower merchants worldwide. 8+ years transforming commerce through innovative technology solutions, strategic alliances, and collaborative ecosystems that drive real results.</p>
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQFFlLD84gO3ng/profile-displayphoto-shrink_200_200/B56ZbHUrPpGoAc-/0/1747100808463?e=1770249600&v=beta&t=lxX4JGBaafPbvWa6K4NF4o893Py1RV_nLLL7NtoeElw" alt="Shawn Fulham - Partner Development Manager at Shopify specializing in strategic partnerships and e-commerce innovation in Toronto" class="hero-avatar-img" loading="eager" width="150" height="150">
+            <h1>Shawn Fulham - Partner Development Manager</h1>
+            <h2>Strategic Partnerships & E-Commerce Innovation Expert</h2>
+            <p>Building strategic partnerships at Shopify to empower merchants worldwide. 8+ years transforming commerce through innovative technology solutions, B2B SaaS sales, and collaborative ecosystems that drive measurable revenue growth.</p>
             <a href="#contact" class="cta-button">Let's Connect</a>
         </div>
     </section>
@@ -535,9 +705,9 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Here's what gets me excited: building strategic partnerships that genuinely empower merchants and transform how businesses thrive online. Currently doing this at Shopify, where innovation meets impact every day! 🚀</p>
-                <p>With 8+ years of experience managing priority accounts and strategic alliances with tech giants like Microsoft, Salesforce, SAP, and Workday at PwC Canada, I've learned that the best partnerships aren't just about deals—they're about creating ecosystems where everyone wins.</p>
-                <p>I geek out over go-to-market strategies, technology commercialization, and finding creative ways to help businesses of all sizes succeed in the digital economy.</p>
+                <p>As a Partner Development Manager at Shopify in Toronto, I specialize in strategic partnerships and alliance sales that drive measurable revenue growth for e-commerce businesses worldwide. What gets me excited is building partnerships that genuinely empower merchants and transform how businesses thrive online. 🚀</p>
+                <p>With 8+ years of experience in B2B SaaS sales and technology partnerships, I've managed priority accounts and strategic alliances with tech giants like Microsoft, Salesforce, SAP, and Workday at PwC Canada. My expertise spans go-to-market strategy, account management, technology commercialization, and partner development across the Canadian market.</p>
+                <p>I bring a proven track record of revenue generation—from designing national Mid-Market alliance strategies that grew sales 15% YoY to managing a $10M portfolio with 12% year-over-year growth. I geek out over creating ecosystems where everyone wins: businesses, partners, and customers alike.</p>
             </div>
             <div>
                 <h3 style="color: #5eead4; margin-bottom: 20px; font-size: 24px;">Core Expertise</h3>
@@ -557,19 +727,27 @@
         
         <!-- Fun Facts Section -->
         <div class="fun-facts">
-            <h3>Quick Stats & Fun Facts</h3>
+            <h3>Fun Facts</h3>
             <div class="fun-facts-grid">
+                <div class="fun-fact-item">
+                    <div class="emoji">🐕</div>
+                    <div class="label">Golden doodle dad to B</div>
+                </div>
+                <div class="fun-fact-item">
+                    <div class="emoji">🏃</div>
+                    <div class="label">Marathon runner</div>
+                </div>
+                <div class="fun-fact-item">
+                    <div class="emoji">🏊‍♂️</div>
+                    <div class="label">2x Half Ironman finisher</div>
+                </div>
+                <div class="fun-fact-item">
+                    <div class="emoji">🌏</div>
+                    <div class="label">Partnered my way through SE Asia</div>
+                </div>
                 <div class="fun-fact-item">
                     <div class="emoji">🚴</div>
                     <div class="label">$200K+ raised for charity rides</div>
-                </div>
-                <div class="fun-fact-item">
-                    <div class="emoji">📈</div>
-                    <div class="label">15% YoY Alliance sales growth</div>
-                </div>
-                <div class="fun-fact-item">
-                    <div class="emoji">💼</div>
-                    <div class="label">$10M portfolio managed</div>
                 </div>
                 <div class="fun-fact-item">
                     <div class="emoji">🌍</div>
@@ -579,9 +757,9 @@
                     <div class="emoji">🤝</div>
                     <div class="label">8+ years building partnerships</div>
                 </div>
-                <div class="fun-fact-item">
-                    <div class="emoji">☕</div>
-                    <div class="label">Fueled by coffee & collaboration</div>
+                <div class="fun-fact-item" id="game-designer-fact" style="cursor: pointer;">
+                    <div class="emoji">💻</div>
+                    <div class="label">Amateur website & game designer</div>
                 </div>
             </div>
         </div>
@@ -589,16 +767,16 @@
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2 class="section-title">Career Journey</h2>
-        <div class="experience-card">
+        <h2 class="section-title">Strategic Partnership Experience & Career Journey</h2>
+        <article class="experience-card">
             <h3>Partner Development Manager</h3>
-            <h4>Shopify | Current</h4>
-            <p>Leading strategic partnerships to empower merchants and transform global commerce. Building innovative technology ecosystems that help businesses of all sizes thrive in the digital economy. Driving collaboration with key partners to create seamless merchant experiences and unlock new opportunities in e-commerce. 🛍️</p>
+            <h4>Shopify | Toronto, Ontario | Current</h4>
+            <p>Leading strategic partnerships and e-commerce innovation initiatives to empower merchants and transform global commerce. Building innovative technology ecosystems and go-to-market strategies that help businesses of all sizes thrive in the digital economy. Driving B2B collaboration with key partners to create seamless merchant experiences and unlock new revenue opportunities in e-commerce. 🛍️</p>
         </div>
-        <div class="experience-card">
+        <article class="experience-card">
             <h3>Manager Strategic Alliances & Accounts</h3>
-            <h4>PwC Canada | 2024</h4>
-            <p>Led partnership strategy with Microsoft, Workday, Salesforce, and SAP in PwC's private segment:</p>
+            <h4>PwC Canada | Toronto, Ontario | 2024</h4>
+            <p>Led Mid-Market alliance partnership strategy with Microsoft, Workday, Salesforce, and SAP in PwC's private segment, driving B2B technology sales and revenue growth:</p>
             <ul>
                 <li>🎯 Designed and activated national Mid-Market Alliance partnership strategy, growing sales <strong>15% YoY</strong> and pipeline <strong>24%</strong></li>
                 <li>💰 Managed portfolio generating <strong>$10M in annual revenue</strong> with <strong>12% YoY growth</strong></li>
@@ -606,9 +784,9 @@
                 <li>✅ Executed RFP/RFI proposals, improving win rates through strategic bid decisions</li>
             </ul>
         </div>
-        <div class="experience-card">
+        <article class="experience-card">
             <h3>Commercialization, Products & Technology</h3>
-            <h4>PwC Canada | 2021 - 2024</h4>
+            <h4>PwC Canada | Toronto, Ontario | 2021 - 2024</h4>
             <p>Led a team of 7 (Sales, Sales Ops, Client Success) ensuring ROI and long-term success of B2B digital assets:</p>
             <ul>
                 <li>🚀 Executed GTM strategy for new B2B tech products</li>
@@ -617,10 +795,10 @@
                 <li>🎖️ Established reporting structure for technology sales</li>
             </ul>
         </div>
-        <div class="experience-card">
-            <h3>Early Career Highlights</h3>
-            <h4>BlueDot (2019-2020) | Carrot Rewards (2016-2019)</h4>
-            <p>Cut my teeth in SaaS sales and partnership development:</p>
+        <article class="experience-card">
+            <h3>Early Career in SaaS Sales & Partnership Development</h3>
+            <h4>BlueDot (2019-2020) | Carrot Rewards (2016-2019) | Toronto, Ontario</h4>
+            <p>Built foundation in B2B SaaS sales, account executive roles, and partnership development:</p>
             <ul>
                 <li>🏥 Grew public health pipeline to <strong>$5M+ in qualified leads</strong> within 3 months at BlueDot</li>
                 <li>📊 Achieved <strong>300% YoY sales growth</strong> at Carrot Rewards</li>
@@ -633,7 +811,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Let's Connect</h2>
-        <p style="text-align: center; color: #e5e5e5; font-size: 18px; margin-bottom: 30px;">Based in Toronto 🍁 | Always up for a coffee chat about partnerships, e-commerce, or charity cycling!</p>
+        <p style="text-align: center; color: #e5e5e5; font-size: 18px; margin-bottom: 30px;">Based in Toronto, Ontario 🍁 | Available for partnership opportunities, consulting, and collaboration in e-commerce and SaaS sales</p>
         <div class="contact-links">
             <a href="https://www.linkedin.com/in/shawnfulham" target="_blank" class="contact-link">
                 <span>💼</span>
@@ -649,10 +827,227 @@
             </a>
         </div>
     </section>
+    </main>
+
+    <!-- Snake Game Modal -->
+    <div class="game-modal" id="snakeGameModal">
+        <div class="game-container">
+            <div class="game-title">🐍 RETRO SNAKE 🐍</div>
+            <div class="game-instructions">Use Arrow Keys to Move!</div>
+            <div class="game-score">SCORE: <span id="score">0</span></div>
+            <canvas id="snakeCanvas" class="game-canvas" width="400" height="400"></canvas>
+            <button class="game-close" id="closeGame">CLOSE GAME</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Shawn Fulham. Built with 💚 and a lot of coffee ☕</p>
     </footer>
+
+    <!-- Snake Game Script -->
+    <script>
+        // Open game when clicking on game designer fact
+        document.getElementById('game-designer-fact').addEventListener('click', function() {
+            document.getElementById('snakeGameModal').classList.add('active');
+            startGame();
+        });
+
+        // Close game
+        document.getElementById('closeGame').addEventListener('click', function() {
+            document.getElementById('snakeGameModal').classList.remove('active');
+            gameRunning = false;
+        });
+
+        // Snake Game Logic
+        const canvas = document.getElementById('snakeCanvas');
+        const ctx = canvas.getContext('2d');
+        const gridSize = 20;
+        const tileCount = canvas.width / gridSize;
+
+        let snake = [{x: 10, y: 10}];
+        let food = {x: 15, y: 15};
+        let dx = 0;
+        let dy = 0;
+        let score = 0;
+        let gameRunning = false;
+        let gameLoop;
+
+        const colors = ['#ff00ff', '#00ffff', '#ffff00', '#00ff00', '#ff0080'];
+        let colorIndex = 0;
+
+        function startGame() {
+            snake = [{x: 10, y: 10}];
+            food = {x: 15, y: 15};
+            dx = 1;
+            dy = 0;
+            score = 0;
+            gameRunning = true;
+            document.getElementById('score').textContent = score;
+            
+            if (gameLoop) clearInterval(gameLoop);
+            gameLoop = setInterval(update, 100);
+        }
+
+        function update() {
+            if (!gameRunning) return;
+
+            // Move snake
+            const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+
+            // Check wall collision
+            if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+                gameOver();
+                return;
+            }
+
+            // Check self collision
+            for (let segment of snake) {
+                if (segment.x === head.x && segment.y === head.y) {
+                    gameOver();
+                    return;
+                }
+            }
+
+            snake.unshift(head);
+
+            // Check food collision
+            if (head.x === food.x && head.y === food.y) {
+                score++;
+                document.getElementById('score').textContent = score;
+                colorIndex = (colorIndex + 1) % colors.length;
+                placeFood();
+            } else {
+                snake.pop();
+            }
+
+            draw();
+        }
+
+        function draw() {
+            // Clear canvas with retro grid
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw grid
+            ctx.strokeStyle = '#1a1a2e';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= tileCount; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * gridSize, 0);
+                ctx.lineTo(i * gridSize, canvas.height);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(0, i * gridSize);
+                ctx.lineTo(canvas.width, i * gridSize);
+                ctx.stroke();
+            }
+
+            // Draw snake with neon glow
+            snake.forEach((segment, index) => {
+                const color = colors[colorIndex];
+                
+                // Glow effect
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = color;
+                
+                // Snake body
+                ctx.fillStyle = color;
+                ctx.fillRect(
+                    segment.x * gridSize + 1,
+                    segment.y * gridSize + 1,
+                    gridSize - 2,
+                    gridSize - 2
+                );
+
+                // Add highlight for 3D effect
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.fillRect(
+                    segment.x * gridSize + 2,
+                    segment.y * gridSize + 2,
+                    gridSize / 2,
+                    gridSize / 2
+                );
+            });
+
+            // Draw food with pulsing glow
+            ctx.shadowBlur = 30;
+            ctx.shadowColor = '#ff0080';
+            ctx.fillStyle = '#ff0080';
+            ctx.fillRect(
+                food.x * gridSize + 1,
+                food.y * gridSize + 1,
+                gridSize - 2,
+                gridSize - 2
+            );
+
+            // Food sparkle
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(
+                food.x * gridSize + gridSize/2 - 2,
+                food.y * gridSize + gridSize/2 - 2,
+                4,
+                4
+            );
+
+            ctx.shadowBlur = 0;
+        }
+
+        function placeFood() {
+            food = {
+                x: Math.floor(Math.random() * tileCount),
+                y: Math.floor(Math.random() * tileCount)
+            };
+
+            // Make sure food doesn't spawn on snake
+            for (let segment of snake) {
+                if (segment.x === food.x && segment.y === food.y) {
+                    placeFood();
+                    return;
+                }
+            }
+        }
+
+        function gameOver() {
+            gameRunning = false;
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.font = 'bold 40px Courier New';
+            ctx.fillStyle = '#ff00ff';
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = '#ff00ff';
+            ctx.textAlign = 'center';
+            ctx.fillText('GAME OVER!', canvas.width/2, canvas.height/2 - 20);
+            
+            ctx.font = '20px Courier New';
+            ctx.fillStyle = '#00ffff';
+            ctx.shadowColor = '#00ffff';
+            ctx.fillText('Press Close to exit', canvas.width/2, canvas.height/2 + 20);
+            
+            ctx.shadowBlur = 0;
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (!gameRunning) return;
+
+            switch(e.key) {
+                case 'ArrowUp':
+                    if (dy === 0) { dx = 0; dy = -1; }
+                    break;
+                case 'ArrowDown':
+                    if (dy === 0) { dx = 0; dy = 1; }
+                    break;
+                case 'ArrowLeft':
+                    if (dx === 0) { dx = -1; dy = 0; }
+                    break;
+                case 'ArrowRight':
+                    if (dx === 0) { dx = 1; dy = 0; }
+                    break;
+            }
+            e.preventDefault();
+        });
+    </script>
 </body>
 </html>
