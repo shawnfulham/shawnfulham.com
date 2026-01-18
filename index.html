@@ -518,6 +518,57 @@
             font-size: 14px;
         }
 
+        /* Game Designer Fun Fact Special Styling */
+        .game-designer-item {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-designer-item .hover-text {
+            display: none;
+        }
+
+        .game-designer-item:hover {
+            background: linear-gradient(45deg, #330066, #1a0033);
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+            animation: retroPulse 0.5s ease-in-out infinite;
+        }
+
+        @keyframes retroPulse {
+            0%, 100% { transform: scale(1.05); }
+            50% { transform: scale(1.08); }
+        }
+
+        .game-designer-item:hover .default-text {
+            display: none;
+        }
+
+        .game-designer-item:hover .hover-text {
+            display: inline;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: rainbowText 2s ease infinite;
+            font-size: 16px;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+        }
+
+        .game-designer-item:hover .emoji {
+            animation: emojiSpin 0.6s ease infinite;
+            filter: drop-shadow(0 0 10px #ff00ff);
+        }
+
+        @keyframes emojiSpin {
+            0%, 100% { transform: rotate(-5deg) scale(1.2); }
+            50% { transform: rotate(5deg) scale(1.3); }
+        }
+
         /* Snake Game Modal */
         .game-modal {
             display: none;
@@ -757,9 +808,12 @@
                     <div class="emoji">🤝</div>
                     <div class="label">8+ years building partnerships</div>
                 </div>
-                <div class="fun-fact-item" id="game-designer-fact" style="cursor: pointer;">
+                <div class="fun-fact-item game-designer-item" id="game-designer-fact">
                     <div class="emoji">💻</div>
-                    <div class="label">Amateur website & game designer</div>
+                    <div class="label">
+                        <span class="default-text">Amateur website & game designer</span>
+                        <span class="hover-text">Play Snake Game</span>
+                    </div>
                 </div>
             </div>
         </div>
